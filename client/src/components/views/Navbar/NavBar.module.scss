@@ -1,0 +1,30 @@
+@import '../../../styles/global.scss';
+
+.navbar {
+  font-size: $base-size * 1.4;
+  text-transform: uppercase;
+  color: $color-text;
+  background-color: white;
+  margin: 0;
+}
+
+.logo_div {
+  position: relative;
+  z-index: 1;
+}
+
+.logo_div button {
+  padding: auto;
+  font-size: 30px;
+  color: $color-black;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 800;
+  background-color: white;
+  height: 50px;
+}
+
+.bnt:hover {
+  background-color: $color-black;
+}
