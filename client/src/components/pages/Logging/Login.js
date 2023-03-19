@@ -92,7 +92,7 @@ const Login = () => {
           ></Form.Control>
         </Form.Group>
         <Button variant="primary" type="submit">
-          Sign in
+          Log in
         </Button>
       </Form>
     </Container>
