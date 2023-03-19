@@ -3,10 +3,7 @@ import Button from 'react-bootstrap/esm/Button';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 import styles from './InformationBox.module.scss';
-import { MdOutlineLocalShipping } from 'react-icons/md';
-import { BsCashCoin } from 'react-icons/bs';
-import { BiSupport } from 'react-icons/bi';
-import { GiReturnArrow } from 'react-icons/gi';
+
 
 const InformationBox = () => {
   return (
