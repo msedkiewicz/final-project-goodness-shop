@@ -219,7 +219,6 @@ const Order = () => {
               <Form.Group className="my-1">
                 <Form.Check
                   className="my-2"
-                  inline
                   label="Personal collection"
                   name="delivery"
                   type="radio"
@@ -238,7 +237,6 @@ const Order = () => {
                 />
                 <Form.Check
                   className="my-1"
-                  inline
                   label="Shipping by mail 15$"
                   name="delivery"
                   type="radio"
@@ -248,7 +246,6 @@ const Order = () => {
                 />
                 <Form.Check
                   className="my-1"
-                  inline
                   label="Send by courier 25$"
                   name="delivery"
                   type="radio"
