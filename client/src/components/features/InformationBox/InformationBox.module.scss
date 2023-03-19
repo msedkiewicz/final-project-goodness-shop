@@ -1,0 +1,91 @@
+@import '../../../styles/global.scss';
+
+.informationbox {
+  margin-bottom: 36px;
+
+  .card {
+    width: 100%;
+    height: 554px;
+    border-radius: 4px;
+    display: flex;
+    gap: 5px;
+    z-index: 1;
+  }
+
+  .card .img {
+    z-index: 0;
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+    z-index: 1;
+
+    img {
+      transition: all 1s;
+    }
+  }
+
+  .card .img:hover {
+    flex: 5;
+    opacity: 1;
+
+    .content {
+      opacity: 1;
+      scale: 100%;
+    }
+    img {
+      scale: 70%;
+    }
+    .content::after {
+      opacity: 0.6;
+    }
+  }
+  .content {
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    top: 150%;
+    z-index: 1;
+    scale: 10%;
+    color: $color-white;
+    opacity: 0;
+    transition: all 1s;
+    padding: 15px 25px;
+    .btn {
+      z-index: 1;
+      margin-left: 10px;
+      border-radius: 5px;
+      font-weight: 700;
+    }
+  }
+  .content::after {
+    content: '';
+    background-color: black;
+    min-height: 110px;
+    width: 100%;
+    opacity: 0.6;
+    position: absolute;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transition: all 1s;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  .information {
+    display: flex;
+    align-items: center;
+
+    h2,
+    p {
+      margin-left: 15px;
+    }
+  }
+}
