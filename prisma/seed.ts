@@ -87,50 +87,62 @@ function getProduct() {
 function getImages() {
   return [
     {
+      id: 'c72899ed-ac4f-4af6-930f-1a353c5392da',
       image: 'love2.jpg',
       productId: 'fd77c655-f154-4163-b18b-324e78100a01',
     },
     {
+      id: 'c72899ed-ac4f-4af6-930f-1a353c5392db',
       image: 'smile2.jpg',
       productId: 'fd77c655-f154-4163-b18b-324e78100a02',
     },
     {
+      id: 'c72899ed-ac4f-4af6-930f-1a353c5392dc',
       image: 'smile3.jpg',
       productId: 'fd77c655-f154-4163-b18b-324e78100a02',
     },
     {
+      id: 'c72899ed-ac4f-4af6-930f-1a353c5392dd',
       image: 'hugging2.jpg',
       productId: 'fd77c655-f154-4163-b18b-324e78100a03',
     },
     {
+      id: 'c72899ed-ac4f-4af6-930f-1a353c5392de',
       image: 'coffee2.jpg',
       productId: 'fd77c655-f154-4163-b18b-324e78100a04',
     },
     {
+      id: 'c72899ed-ac4f-4af6-930f-1a353c5392df',
       image: 'coffee3.jpg',
       productId: 'fd77c655-f154-4163-b18b-324e78100a04',
     },
     {
+      id: 'c72899ed-ac4f-4af6-930f-1a353c5392dg',
       image: 'peace2.jpg',
       productId: 'fd77c655-f154-4163-b18b-324e78100a05',
     },
     {
+      id: 'c72899ed-ac4f-4af6-930f-1a353c5392dh',
       image: 'peace3.jpg',
       productId: 'fd77c655-f154-4163-b18b-324e78100a05',
     },
     {
+      id: 'c72899ed-ac4f-4af6-930f-1a353c5392di',
       image: 'kindness2.jpg',
       productId: 'fd77c655-f154-4163-b18b-324e78100a06',
     },
     {
+      id: 'c72899ed-ac4f-4af6-930f-1a353c5392dj',
       image: 'happiness2.jpg',
       productId: 'fd77c655-f154-4163-b18b-324e78100a07',
     },
     {
+      id: 'c72899ed-ac4f-4af6-930f-1a353c5392dk',
       image: 'happiness3.jpg',
       productId: 'fd77c655-f154-4163-b18b-324e78100a07',
     },
     {
+      id: 'c72899ed-ac4f-4af6-930f-1a353c5392dl',
       image: 'gratitude2.jpg',
       productId: 'fd77c655-f154-4163-b18b-324e78100a08',
     },
