@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const OfferBox = (props) => {
   return (
-    <Card className={styles.root}>
+    <Card className={styles.offerbox}>
       <Card.Img variant="top" src={`./images/products/${props.image}`} />
       <Card.Body className="text-center">
         <Col className="d-flex justify-content-center">

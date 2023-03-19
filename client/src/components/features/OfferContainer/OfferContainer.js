@@ -28,8 +28,8 @@ const OfferContainer = () => {
       });
   }
   const allProducts = useSelector(getProducts);
-  const productsMen = useSelector(getProductsBasic);
-  const productsWoman = useSelector(getProductsExtended);
+  const productsBasic = useSelector(getProductsBasic);
+  const productsExtended = useSelector(getProductsExtended);
   if (isLoading) {
     return (
       <Spinner animation="border" role="status" className="d-block mx-auto">
@@ -43,8 +43,8 @@ const OfferContainer = () => {
           <Col className={'text-center mt-3'}>
             <TabList className={'mt-5 ' + styles.tabList}>
               <Tab className={styles.tab}>All</Tab>
-              <Tab className={styles.tab}>Extended</Tab>
               <Tab className={styles.tab}>Basic</Tab>
+              <Tab className={styles.tab}>Extended</Tab>
             </TabList>
           </Col>
           <Container className="mt-5">
@@ -61,7 +61,7 @@ const OfferContainer = () => {
             <TabPanel>
               {' '}
               <Row xs={1} md={2} lg={4} className="g-3 ">
-                {productsWoman.map((product) => (
+                {productsBasic.map((product) => (
                   <Col key={product.id}>
                     <OfferBox {...product} />
                   </Col>
@@ -71,7 +71,7 @@ const OfferContainer = () => {
             <TabPanel>
               {' '}
               <Row xs={1} md={2} lg={4} className="g-3 ">
-                {productsMen.map((product) => (
+                {productsExtended.map((product) => (
                   <Col key={product.id}>
                     <OfferBox {...product} />
                   </Col>
