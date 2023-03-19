@@ -1,8 +1,15 @@
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
+import cardReducer from './cardRedux';
 import initialState from './initialState';
+import productsReducer from './productsRedux';
+import userReducer from './userRedux';
 
-const subreducers = {};
+const subreducers = {
+  products: productsReducer,
+  user: userReducer,
+  card: cardReducer,
+};
 
 const reducer = combineReducers(subreducers);
 const store = createStore(
@@ -16,3 +23,5 @@ const store = createStore(
       : (f) => f,
   ),
 );
+
+export default store;
