@@ -149,14 +149,13 @@ function getImages() {
   ];
 }
 
-async function seed_products() {
+async function seed() {
   await Promise.all(
     getProduct().map((product) => {
       return db.product.create({ data: product });
     }),
   );
-}
-async function seed_images() {
+
   await Promise.all(
     getImages().map((image) => {
       return db.images.create({ data: image });
@@ -164,5 +163,4 @@ async function seed_images() {
   );
 }
 
-seed_products();
-seed_images();
+seed();
