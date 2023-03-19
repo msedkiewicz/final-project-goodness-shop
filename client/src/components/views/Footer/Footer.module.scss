@@ -1,0 +1,39 @@
+@import '../../../styles/global.scss';
+
+.footer {
+  background-color: $color-black;
+
+  .row {
+    padding: 25px;
+    display: relative;
+  }
+}
+.media {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  a {
+    color: #6a6a6a;
+    font-size: 20px;
+    padding: 0 10px;
+    position: relative;
+  }
+
+  .twitter:hover, .facebook:hover, .instagram:hover, .pinterest:hover {
+    color: $color-white;
+  }
+}
+
+.logofooter {
+    text-align: center;
+}
+.logofooter button {
+  font-size: 20px;
+  color: $color-white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: transparent;
+}
