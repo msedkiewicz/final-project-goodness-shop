@@ -1,0 +1,23 @@
+@import '../../../styles/global.scss';
+
+.orderpage {
+  margin: 46px 0;
+  color: $color-text;
+  .info {
+    border: 1px solid $color-text;
+    padding: 15px;
+
+    p,
+    h4,
+    h3 {
+      margin-top: 5px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $color-text;
+    }
+    div {
+      p {
+        border: none;
+      }
+    }
+  }
+}
