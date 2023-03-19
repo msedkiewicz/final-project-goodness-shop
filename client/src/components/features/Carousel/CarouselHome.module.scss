@@ -1,0 +1,29 @@
+@import '../../../styles/global.scss';
+
+.carousel {
+  margin: 48px 0;
+  img {
+    height: 500px;
+    object-fit: cover;
+  }
+
+  .content {
+    background-color: black;
+    padding: 20px;
+
+    Button {
+      background-color: white;
+      opacity: 0.75;
+    }
+    Button:hover {
+      opacity: 1;
+      font-weight: 600;
+    }
+    h2 {
+      font-size: $base-size * 3;
+    }
+    p {
+      font-size: $base-size * 1.5;
+    }
+  }
+}
