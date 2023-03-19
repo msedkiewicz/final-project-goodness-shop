@@ -16,8 +16,8 @@ const NavBar = () => {
     <Navbar className={styles.navbar}>
       <Container>
         <Navbar.Brand href="/">
-          <div class={styles.logo_div}>
-            <button href="/">Goodness</button>
+          <div className={styles.logoheader}>
+            <button href="/">Goodness Shop</button>
           </div>
         </Navbar.Brand>
         <Navbar.Collapse

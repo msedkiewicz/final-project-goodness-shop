@@ -8,14 +8,14 @@
   margin: 0;
 }
 
-.logo_div {
+.logoheader {
   position: relative;
   z-index: 1;
 }
 
-.logo_div button {
+.logoheader button {
   padding: auto;
-  font-size: 30px;
+  font-size: 25px;
   color: $color-black;
   border: none;
   cursor: pointer;
