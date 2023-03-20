@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './NavBar.module.scss';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -12,11 +12,35 @@ import { Link } from 'react-router-dom';
 import { BsCart, BsSearch } from 'react-icons/bs';
 
 const NavBar = () => {
+  const [cart, setCart] = useState(
+    JSON.parse(localStorage.getItem('cart')) || [],
+  );
+  const [user, setUser] = useState(
+    JSON.parse(localStorage.getItem('user')) || [],
+  );
+
+  useEffect(() => {
+    if (cart.length !== 0) {
+      setCart(JSON.parse(localStorage.getItem('cart')));
+      getLength();
+    }
+    setUser(JSON.parse(localStorage.getItem('user')));
+  }, [cart]);
+
+  function getLength() {
+    let total = 0;
+    cart.forEach((item) => {
+      total = total + 1;
+    });
+
+    return total;
+  }
+
   return (
     <Navbar className={styles.navbar}>
       <Container>
         <Navbar.Brand href="/">
-          <div className={styles.logoheader}>
+        <div className={styles.logoheader}>
             <button href="/">Goodness Shop</button>
           </div>
         </Navbar.Brand>
@@ -41,7 +65,7 @@ const NavBar = () => {
                 </Button>
               </Form>
             </Col>
-            <Col className="col-3">
+            <Col className="col-1">
               <Link
                 to="/cart"
                 className={'d-flex align-items-center justify-content-around '}
@@ -49,19 +73,34 @@ const NavBar = () => {
                 <Button className={styles.bnt} variant="outline-secondary">
                   <BsCart />
                 </Button>
-                <p
-                  className={
-                    'd-flex align-items-center justify-content-center m-0 p-1 '
-                  }
-                ></p>
               </Link>
             </Col>
-            <Col className="col-2">
+            <Col className={'col-2'}>
+              <p
+                className={
+                  'd-flex align-items-center justify-content-center m-0 ' +
+                  styles.cartLenght
+                }
+              >
+                {getLength() || null }
+              </p>
+            </Col>
+            <Col className="col-3">
               <Nav>
-                <NavDropdown title="User Panel">
-                  <NavDropdown.Item href="/login">Login</NavDropdown.Item>
-                  <NavDropdown.Item href="/register">Register</NavDropdown.Item>
-                </NavDropdown>
+                {user ? (
+                  <NavDropdown title={`Hi ${user.login}`}>
+                    <NavDropdown.Item href="/logout">
+                      Logout
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                ) : (
+                  <NavDropdown title={'User Panel'}>
+                    <NavDropdown.Item href="/login">Login</NavDropdown.Item>
+                    <NavDropdown.Item href="/register">
+                      Register
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                )}
               </Nav>
             </Col>
           </Row>
