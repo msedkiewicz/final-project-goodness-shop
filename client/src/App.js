@@ -8,7 +8,7 @@ import Footer from './components/views/Footer/Footer';
 import Home from './components/pages/Home/Home';
 import NavBar from './components/views/NavBar/NavBar';
 import NotFound from './components/pages/NotFound/NotFound';
-// import Cart from './components/views/cart/Cart';
+import Cart from './components/pages/Cart/Cart';
 import Login from './components/pages/Logging/Login';
 import Logout from './components/pages/Logging/Logout';
 import Register from './components/pages/Register/Register';
@@ -44,7 +44,7 @@ function App() {
           <Route path="/logout" element={<Logout />} />
           <Route path="/register" element={<Register />} />
           <Route path="/product/:id" element={<ProductPage />} />
-          {/*  <Route path="/cart" element={<Cart />} /> */}
+          <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<Order />} />
           {/* <Route path="/summary" element={<Summary />} />
            */}
