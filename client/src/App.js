@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import Order from './components/pages/Order/Order';
-// import ProductPage from './components/features/ProductPage/ProductPage';
+import ProductPage from './components/pages/Product/ProductPage';
 import Footer from './components/views/Footer/Footer';
 import Home from './components/pages/Home/Home';
 import NavBar from './components/views/NavBar/NavBar';
@@ -43,8 +43,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/register" element={<Register />} />
-          {/* <Route path="/product/:id" element={<ProductPage />} /> 
-          <Route path="/cart" element={<Cart />} /> */}
+          <Route path="/product/:id" element={<ProductPage />} />
+          {/*  <Route path="/cart" element={<Cart />} /> */}
           <Route path="/order" element={<Order />} />
           {/* <Route path="/summary" element={<Summary />} />
            */}
