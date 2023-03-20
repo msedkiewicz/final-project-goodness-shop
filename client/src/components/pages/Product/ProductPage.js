@@ -39,7 +39,6 @@ const ProductPage = () => {
   const handleAddCart = async () => {
     const data = { id: shortid(), value, productData, comment };
     dispatch(addCart(data));
-    console.log(data);
     if (!localStorage.getItem('cart')) {
       localStorage.setItem('cart', '[]');
     }

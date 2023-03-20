@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 
 const Cart = () => {
   const [cartData, setCartData] = useState(useSelector(getCart));
-  console.log(cartData);
   const [user, setUser] = useState(
     JSON.parse(localStorage.getItem('user')) || 0,
   );
@@ -18,7 +17,6 @@ const Cart = () => {
     let tempCart = cart.filter((item) => item.id != id);
     localStorage.setItem('cart', JSON.stringify(tempCart));
     setCartData(tempCart);
-    console.log(id);
   };
   function getTotalPrice() {
     let totalPrice = 0;

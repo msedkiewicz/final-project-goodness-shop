@@ -9,7 +9,7 @@ const InformationBox = () => {
   return (
     <Row className={styles.informationbox}>
       <Col className={'col-9 '}>
-        <div class={styles.card}>
+        <div className={styles.card}>
           <div className={styles.img}>
             <div className={styles.content}>
               <h2>Peace</h2>{' '}

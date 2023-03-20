@@ -3,7 +3,6 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { PrismaModule } from './prisma/prisma.module';
 import { ProductModule } from './product/product.module';
-// import { TypeOrmModule } from '@nestjs/typeorm';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { UsersModule } from './users/users.module';
@@ -16,12 +15,12 @@ import * as cors from 'cors';
   imports: [
     PrismaModule,
     ProductModule,
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'client', 'build'),
-    }),
     UsersModule,
     AuthModule,
     ConfigModule.forRoot({ load: [configuration], isGlobal: true }),
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'client', 'build'),
+    }),
   ],
   controllers: [AppController],
   providers: [AppService],

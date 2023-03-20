@@ -11,7 +11,6 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [status, setStatus] = useState(null);
   const userCheck = useSelector((state) => getUserByLogin(state, login));
-  console.log(userCheck);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
