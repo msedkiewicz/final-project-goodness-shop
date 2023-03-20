@@ -12,7 +12,7 @@ import Cart from './components/pages/Cart/Cart';
 import Login from './components/pages/Logging/Login';
 import Logout from './components/pages/Logging/Logout';
 import Register from './components/pages/Register/Register';
-// import Summary from './components/views/Summary/Summary';
+import Summary from './components/pages/Summary/Summary';
 import { addCart } from './redux/cartRedux';
 
 function App() {
@@ -46,8 +46,7 @@ function App() {
           <Route path="/product/:id" element={<ProductPage />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<Order />} />
-          {/* <Route path="/summary" element={<Summary />} />
-           */}
+          <Route path="/summary" element={<Summary />} />
         </Routes>
         <Footer />
       </main>
