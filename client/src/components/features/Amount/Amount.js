@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
-import styles from './amount.module.scss';
+import styles from './Amount.module.scss';
 
 const Amount = (props) => {
   const [value, setValue] = useState(1);

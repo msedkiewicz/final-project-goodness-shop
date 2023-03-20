@@ -19,7 +19,7 @@
   }
 
   &_active {
-    border: 1px solid $global-text-color;
+    border: 1px solid $color-text;
     background-color: white;
     transition: all 1s;
   }
@@ -33,7 +33,7 @@
 
 .productInfo {
   padding: 10%;
-  color: $productInfo-color;
+  color: $color-text;
   h1 {
     font-weight: bold;
   }
@@ -62,14 +62,14 @@
   }
   .size_active {
     background-color: $color-white;
-    border-color: $productInfo-color;
+    border-color: $color-text;
   }
   .size_inactive {
     background-color: $color-white;
-    border: 1px solid $global-text-color;
+    border: 1px solid $color-text;
 
     &:hover {
-      background-color: $global-text-color;
+      background-color: $color-text;
     }
   }
 }
